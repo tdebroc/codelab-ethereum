@@ -74,7 +74,7 @@ Sur cette branche, le contrat est déjà crée, ainsi que son test unitaire.
 Seulement, j'ai sadiquement supprimé certaines lignes de code, ce qui empèche les tests unitaires de fonctionner.
 
 Les deux fichiers impactés sont :
-- `contacts/MonTierce.sol` : le contract, qui va être le code déploié sur la blockchain et qui contiendra toutes les méthodes permettant de gérer des paris sur les courses. Ce contrat est écrit en SOLIDITY.
+- `contracts/MonTierce.sol` : le contract, qui va être le code déploié sur la blockchain et qui contiendra toutes les méthodes permettant de gérer des paris sur les courses. Ce contrat est écrit en SOLIDITY.
 - `test/montierce.js` : son test unitaire, qui va utilisé Mocha et Chai pour fournir des tests unitaires et d'intégration sur notre contrat
 
 Vous repérerez les zones corromptues par le pattern FIX_ME disséminé un peu partout dans le code.
@@ -122,7 +122,7 @@ Se mettre sur la branche Step 1-2.
 
      git checkout step1-2
 
-Dans cette partie, nous avons rajouté une méthode getInfosCourse dans le contrat `contacts/MonTierce.sol`. Cette méthode va permettre de consulter des données sur une course.
+Dans cette partie, nous avons rajouté une méthode getInfosCourse dans le contrat `contracts/MonTierce.sol`. Cette méthode va permettre de consulter des données sur une course.
 Pas de FIX_ME dans le code de ce contrat.
 Par contre, le test unitaire `test/montierce.js`, en appliquant le même principe vicieux que précedemment, nécessite d'être complété pour fonctionner.
 
@@ -145,7 +145,7 @@ Tout d'abord charger la deuxième partie du TP :
 
      git checkout step2-1
 
-Une nouvelle méthode a fait son apparition dans le contrat `contacts/MonTierce.sol`
+Une nouvelle méthode a fait son apparition dans le contrat `contracts/MonTierce.sol`
 - parier : méthode publique qui va permettre au parieur de miser un tierce une certaine somme d'argent. Stocke ce pari dans la course.
 
 
@@ -161,7 +161,7 @@ Pour voir la correction de ce TP :
 
      git checkout step2-2
 
-Une nouvelle méthode a fait son apparition dans le contrat `contacts/MonTierce.sol`
+Une nouvelle méthode a fait son apparition dans le contrat `contracts/MonTierce.sol`
 - interdireParis : méthode du propriètaire qui va bloquer la fonctionnalité de pari une fois la course démarrée
 
 Cette fois-ci, c'est notre TU qu'il va falloir réparer, dans `test/montierce.js`.
@@ -181,7 +181,7 @@ Vous devez commencer à avoir l'habitude, pour la troisième partie du TP, on la
      git checkout step3-1
 
 
-Deux méthodes ont fait leur apparition dans le contrat `contacts/MonTierce.sol`
+Deux méthodes ont fait leur apparition dans le contrat `contracts/MonTierce.sol`
 - terminerCourse : méthode du propriètaire qui va effectuer toutes les opérations de fin de course.
 - annulerParis : méthode qui va rendre leur argent aux parieurs si personne n'a gagné ou s'il y a un soucis sur la course
 
